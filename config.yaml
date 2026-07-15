@@ -1,0 +1,50 @@
+# ──────────────────────────────────────────────
+#  Reoxy Bot — Yapılandırma Dosyası
+# ──────────────────────────────────────────────
+
+bot:
+  name: "Reoxy Bot"
+  prefix: "!"
+  description: "Profesyonel Discord Moderasyon Botu"
+  version: "1.0.0"
+  activity: "Sunucuyu koruyor 🛡️"
+  activity_type: "watching"  # playing, streaming, listening, watching, competing
+
+# Moderasyon varsayılan ayarları
+moderation:
+  warn_threshold: 3              # Otomatik ceza için uyarı eşiği
+  warn_action: "timeout"         # Eşik aşılınca: "timeout" veya "ban"
+  warn_timeout_duration: 3600    # Otomatik timeout süresi (saniye) — 1 saat
+  default_softban_days: 7        # Soft-ban varsayılan mesaj silme günü
+  max_timeout_days: 28           # Discord maksimum timeout süresi (gün)
+
+# Embed renk teması (Hex → Decimal)
+# Tema: Koyu arka plan, pembe-mor gradient vurgular
+colors:
+  primary: 0x8B5CF6      # Mor — Ana tema rengi
+  secondary: 0xD946EF    # Pembe-mor — İkincil vurgu
+  success: 0x10B981      # Zümrüt yeşili — Başarılı işlemler
+  error: 0xEF4444        # Kırmızı — Hata mesajları
+  warning: 0xF59E0B      # Kehribar — Uyarılar
+  info: 0x6366F1         # İndigo — Bilgi mesajları
+  moderation: 0xD946EF   # Pembe-mor — Moderasyon işlemleri
+  muted: 0x6B7280        # Gri — Deaktif/pasif durumlar
+
+# Emojiler
+emojis:
+  success: "✅"
+  error: "❌"
+  warning: "⚠️"
+  info: "ℹ️"
+  moderation: "🔨"
+  kick: "👢"
+  ban: "🔨"
+  timeout: "🔇"
+  warn: "⚠️"
+  unban: "🔓"
+  untimeout: "🔊"
+  delete: "🗑️"
+  user: "👤"
+  calendar: "📅"
+  shield: "🛡️"
+  loading: "⏳"

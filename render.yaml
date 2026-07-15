@@ -1,0 +1,27 @@
+# ──────────────────────────────────────────────
+#  Reoxy Bot — Render.com Deployment Config
+# ──────────────────────────────────────────────
+# Bu dosya ile Render'da otomatik deploy alabilirsiniz.
+# Alternatif olarak Render Dashboard'dan da manuel kurabilirsiniz.
+#
+# Kurulum:
+#   1. GitHub reponuzu Render'a bağlayın
+#   2. "Web Service" türünü seçin
+#   3. Aşağıdaki ayarlar otomatik okunacaktır
+#   4. Environment -> Secret Files'dan DISCORD_TOKEN ve DATABASE_URL girin
+# ──────────────────────────────────────────────
+
+services:
+  - type: web
+    name: reoxy-bot
+    runtime: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    healthCheckPath: /health
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
